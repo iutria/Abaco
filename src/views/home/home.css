@@ -1,0 +1,15 @@
+*{
+    transition: 0.5s all ease;
+}
+.floating-button{
+    transition: 0.5s all ease;
+    position: absolute;
+    bottom: 80px;
+    right: 10px;
+    border-radius: 100% !important;
+    width: 50px !important;
+    height: 50px !important;
+}
+.esTablet{
+    bottom: 10px;
+}
