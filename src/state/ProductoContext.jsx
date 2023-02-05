@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { createContext, useState } from "react";
 import { db } from "../config/firebase";
 import {
@@ -17,7 +17,7 @@ export function ProductoContextProvider({ children }) {
 
   const [productos, setProductos] = useState([]);
 
-  // useEffect(() => setProductos(productos), []);
+  useEffect(() => setProductos([]), []);
 
   const add = async (obj) => {
     const response = await addDoc(coleccion, obj);
