@@ -9,6 +9,7 @@
     border-radius: 100% !important;
     width: 50px !important;
     height: 50px !important;
+    z-index: 1000;
 }
 .esTablet{
     bottom: 10px;

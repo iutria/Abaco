@@ -5,12 +5,14 @@ import Parametros from '../views/parametros/Parametros'
 import Configuracion from '../views/configuracion/Configuracion'
 import Facturas from '../views/facturas/Facturas'
 import Creelo from "../views/creelo/Creelo";
+import { ProductoContextProvider } from "../state/ProductoContext";
+
 function RoutesApp() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path='/' element={ <Login /> } />
-        <Route path='/home' element={ <Home /> } />
+        <Route path='/home' element={ <ProductoContextProvider><Home /></ProductoContextProvider> } />
         <Route path='/login' element={ <Login /> } />
         <Route path='/facturas' element={ <Facturas /> } />
         <Route path='/creer' element={ <Creelo /> } />
