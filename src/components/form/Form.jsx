@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
 import Input from "../input/Input";
 import TextArea from "../input/TextArea";
-import './form.css'
+import './form.css';
 
-function Form({ onAceptar, data }) {
+function Form({ onAceptar, data = { nombre: '' } }) {
 
   const nombre = useRef();
   const cantidad = useRef();
@@ -24,16 +24,19 @@ function Form({ onAceptar, data }) {
     };
     
     onAceptar(producto);
-
   }
 
   const formulario = (
     <form onSubmit={ aceptar } className="card p-3  ">
+
+      {/* { data ? 'tiene datos':'no tiene' } */}
+
       <div className="form-inputs-container">
         <Input
           texto='Nombre'
           id="nombre"
           referencia={ nombre }
+          onChange = { (value) => nombre.current.value = value  }
         />
         <Input
           texto='Cantidad'
